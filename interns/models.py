@@ -2,7 +2,7 @@ from django.db import models
 from django.core.validators import FileExtensionValidator
 
 def upload_directory_path(instance, filename):
-    return 'UPLOADS/{0}/{1}'.format(instance, filename)
+    return 'UPLOADS/{0}/{1}'.format(instance.name, filename)
 
 class employee(models.Model):
     name = models.CharField(max_length=50)
